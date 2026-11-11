@@ -1,0 +1,355 @@
+/* =========================================
+   SITE DE NOTÍCIAS - EXERCÍCIO HTML + CSS
+   Altere cores, tamanhos e espaçamentos.
+   ========================================= */
+
+
+/* 1. CONFIGURAÇÕES GERAIS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* TESTE OUTRA COR DE FUNDO */
+  background-color: #f5f5f5;
+
+  /* TESTE OUTRA COR DE TEXTO */
+  color: #1d1d1d;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+
+/* 2. CABEÇALHO */
+
+.topo {
+  background-color: #c4170c;
+  color: #ffffff;
+  border-bottom: 5px solid #ccdb29;
+}
+
+.topo-conteudo {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: #ccdb29;
+}
+
+
+/* 3. DESTAQUE PRINCIPAL */
+
+.destaques {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.noticia-principal {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.imagem-principal {
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+
+  /* TROQUE ESTA COR */
+  background-color: #d9d9d9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555555;
+  margin: 15px 0 20px;
+}
+
+.noticia-principal h1 {
+  font-size: 38px;
+  line-height: 1.1;
+  margin: 12px 0;
+}
+
+.noticia-principal p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+.categoria {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  /* ALTERE A COR DA CATEGORIA */
+  color: #125c7d;
+}
+
+.leia-mais {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 18px;
+  border-radius: 6px;
+
+  /* TESTE OUTRA COR */
+  background-color: #125c7d;
+  color: #ffffff;
+}
+
+.leia-mais:hover {
+  background-color: #0c4058;
+}
+
+
+/* 4. NOTÍCIAS LATERAIS */
+
+.noticias-laterais {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.noticia-menor {
+  background-color: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  border-left: 5px solid #ccdb29;
+}
+
+.noticia-menor h2 {
+  margin: 8px 0 10px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.noticia-menor p {
+  margin: 0;
+  color: #666666;
+  line-height: 1.5;
+}
+
+
+/* 5. ÚLTIMAS NOTÍCIAS */
+
+.ultimas {
+  margin-top: 55px;
+}
+
+.titulo-secao {
+  border-bottom: 3px solid #111111;
+  margin-bottom: 25px;
+}
+
+.titulo-secao h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.grid-noticias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-noticia {
+  background-color: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.imagem-card {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+
+  /* TESTE OUTRA COR */
+  background-color: #dddddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.card-noticia h3 {
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 8px 0;
+}
+
+.card-noticia p {
+  color: #666666;
+  line-height: 1.5;
+}
+
+
+/* 6. NEWSLETTER */
+
+.newsletter {
+  margin: 60px 0;
+  padding: 35px;
+  border-radius: 14px;
+
+  /* ALTERE O FUNDO */
+  background-color: #125c7d;
+
+  color: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.newsletter h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.newsletter p {
+  margin: 0;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  min-width: 260px;
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+}
+
+.newsletter button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  /* ALTERE A COR DO BOTÃO */
+  background-color: #ccdb29;
+  color: #111111;
+  font-weight: bold;
+}
+
+
+/* 7. RODAPÉ */
+
+.rodape {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 28px 0;
+  text-align: center;
+}
+
+
+/* 8. RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+
+  .topo-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+
+  .destaques {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-noticias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .menu {
+    gap: 12px;
+  }
+
+  .noticia-principal h1 {
+    font-size: 29px;
+  }
+
+  .imagem-principal {
+    height: 230px;
+  }
+
+  .grid-noticias {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    min-width: 100%;
+  }
+}
+
+
+/* =========================================
+   DESAFIOS PARA OS ALUNOS
+
+   1. Troque as cores principais do site.
+   2. Mude a cor do cabeçalho.
+   3. Altere a cor das categorias.
+   4. Crie uma nova notícia.
+   5. Mude o grid de 3 colunas para 2.
+   6. Troque o botão da newsletter.
+   7. Crie uma categoria "Games".
+   8. Insira imagens reais nas notícias.
+   9. Crie efeitos hover nos cards.
+   10. Personalize o site com uma nova identidade visual.
+   ========================================= */
